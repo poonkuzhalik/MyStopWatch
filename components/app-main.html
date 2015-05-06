@@ -1,0 +1,31 @@
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+      
+  <polymer-element name="app-main">
+  <template>
+    <paper-button id="start-button" 
+                  label="Start"
+                  raised>Start</paper-button>
+    <style>
+    
+    :host{
+      position: absolute;
+      top: 0;
+      bottom :0;
+      left :0;
+      right :0;
+      
+      background-color: green;
+    }
+    
+     #start-button{
+        background-color: pink;
+        foreground-color: black;
+    }
+      
+    </style>
+ 
+  </template>
+  <script src="app-main.js"></script>
+</polymer-element>
