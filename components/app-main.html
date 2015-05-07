@@ -1,12 +1,34 @@
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
       
   <polymer-element name="app-main">
   <template>
-    <paper-button id="start-button" 
+     <div id="time-container"
+            layout
+            vertical
+            around-justified>
+      <div id="time">00:00:00:000</div>
+    </div>
+    
+    <div id="button-container"
+          layout
+          horizontal
+          around-justified>
+         <paper-button id="start-button" 
                   label="Start"
-                  raised>Start</paper-button>
+                  raised>START</paper-button>
+         <paper-button id="stop-button" 
+                  label="Start"
+                  raised>STOP</paper-button>
+         <paper-button id="restart-button" 
+                  label="Start"
+                  raised>RESTART</paper-button>
+    </div>
+
+
+  
     <style>
     
     :host{
@@ -16,12 +38,50 @@
       left :0;
       right :0;
       
-      background-color: green;
+      background-color: yellow;
+      color: black;
+    }
+    
+    #button-container{
+      position: absolute;
+      bottom :0;
+      left :0;
+      right :0;
+      
+      margin:6px;
+  
+    }
+    
+    #time-container{
+          position: absolute;
+          top :0;
+          left :0;
+          right:0;
+          bottom:35px;
+          text-align:center;
+        }
+        
+    #time{
+      font-size:48px;
+    }
+    
+    paper-button {
+      width:200px;
     }
     
      #start-button{
-        background-color: pink;
-        foreground-color: black;
+        background-color: green;
+        color: white;
+    }
+    
+     #stop-button{
+        background-color: red;
+        color: white;
+    }
+    
+     #restart-button{
+        background-color: blue;
+        color: white;
     }
       
     </style>
