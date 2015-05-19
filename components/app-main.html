@@ -9,7 +9,7 @@
             layout
             vertical
             around-justified>
-      <div id="time">00:00:00:000</div>
+      <div id="time">{{hours}}:{{minutes}}:{{seconds}}</div>
     </div>
     
     <div id="button-container"
@@ -18,12 +18,15 @@
           around-justified>
          <paper-button id="start-button" 
                   label="Start"
+                  on-click="{{start}}"
                   raised>START</paper-button>
          <paper-button id="stop-button" 
                   label="Start"
+                  on-click="{{stop}}"
                   raised>STOP</paper-button>
          <paper-button id="restart-button" 
                   label="Start"
+                  on-click="{{restart}}"
                   raised>RESTART</paper-button>
     </div>
 
